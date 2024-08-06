@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+* {
+  font-family: "Manrope", sans-serif;
+}
+:root {
+  --swiper-navigation-size: 25px;
+  /* --swiper-theme-color: white; */
+}
+
+.coin4 {
+  background: linear-gradient(to right, #0b0d1a, #121a26);
+}
+
+.earnreal {
+  background: linear-gradient(
+    135deg,
+    rgba(11, 13, 26, 0),
+    rgba(11, 13, 26, 0.8),
+    #523512
+  );
+}
+
+body {
+  background: #0b0d1a;
+}
+
+.mkt.red {
+  color: rgb(231, 73, 73);
+}
+
+.upDown.rotate {
+  rotate: 180deg;
+}
+
+#menu.show {
+  right: 0;
+}
+
+.blog6 {
+  background: linear-gradient(
+    75deg,
+    rgba(12, 19, 40, 0),
+    rgba(12, 19, 40, 0),
+    rgba(32, 37, 55, 0.8)
+  );
+}
+.faderight {
+  background: linear-gradient(
+    -75deg,
+    rgba(12, 19, 40, 0),
+    rgba(12, 19, 40, 0),
+    rgba(32, 37, 55, 0.8)
+  );
+}
+
+@media screen and (max-width: 1023px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 85%;
+  }
+}

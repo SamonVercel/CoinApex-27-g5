@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Invest in a wide variety of leading cryptos on CoinApex’s easy-to-use platform. Build connections and expand your knowledge alongside millions of other investors."
+    />
+    <meta name="keywords" content="coinapex coin ctypto trading invest" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="Image/icon.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CoinApex: The crypto trading platform trusted by millions</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1211799346681320");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1211799346681320&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body class="text-slate-100">
+    <!-- Header -->
+    <header
+      class="w-full text-slate-100 absolute transition-all z-40 bg-black bg-opacity-95"
+      id="header"
+    >
+      <nav
+        class="max-w-[1220px] flex justify-between m-auto items-center h-[70px] z-40 px-2"
+      >
+        <h1 class="text-3xl text-slate-100 font-bold">CoinApex</h1>
+        <ul
+          id="menu"
+          class="flex md:text-slate-100 text-white gap-5 text-lg md:static fixed top-0 right-[-100%] transition-all md:h-auto h-[100vh] md:w-auto w-full md:flex-row flex-col md:bg-transparent bg-black z-50 p-3"
+        >
+          <div class="flex justify-between">
+            <h1 class="text-3xl text-teal-500 font-bold md:hidden">CoinApex</h1>
+            <button id="close-btn" class="flex justify-end text-3xl md:hidden">
+              <ion-icon name="close"></ion-icon>
+            </button>
+          </div>
+          <li>Products</li>
+          <li>Prices</li>
+          <li>University</li>
+          <li>Company</li>
+        </ul>
+        <div class="flex items-center gap-6">
+          <div class="flex items-center rounded-xl">
+            <button
+              onclick="url()"
+              class="text-lg w-32 h-10 flex justify-center items-center bg-blue-700 hover:bg-indigo-400 transition-all duration-500 text-white rounded-2xl border-gray-500 cursor-pointer"
+            >
+              Join Group
+            </button>
+          </div>
+          <button class="text-3xl md:hidden flex items-center" id="menu-btn">
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="w-full absolute md:top-[150px] top-[100px]">
+      <section
+        class="max-w-[1000px] m-auto flex items-center md:flex-row flex-col px-2 gap-10 md:text-left text-center"
+      >
+        <div class="md:max-w-[46%]">
+          <h1 class="text-6xl font-bold">
+            Earn Up to 15% on Toncoin and Notcoin!
+          </h1>
+          <p class="mt-8 font-bold text-xl">
+            Instantly buy TON and NOT, enjoy weekly payouts, and trade easily to
+            grow your assets.
+          </p>
+          <button
+            onclick="url()"
+            class="w-[200px] cursor-pointer md:mx-0 mx-auto flex justify-center items-center h-12 text-lg font-bold mt-8 rounded-xl bg-blue-700 hover:bg-indigo-400 transition-all duration-500"
+          >
+            Join Now
+          </button>
+        </div>
+        <div class="md:max-w-[90%] max-w-[60%]">
+          <img src="Image/heroCoin.png" alt="" />
+        </div>
+      </section>
+
+      <!-- Coin 4  -->
+      <section class="px-2">
+        <div
+          class="mt-16 max-w-[1000px] m-auto grid md:grid-cols-4 grid-cols-2 rounded-2xl px-4 py-8 border border-opacity-40 border-cyan-400 gap-8 coin4"
+        >
+          <div class="flex gap-4 items-center">
+            <div class="">
+              <img class="w-full" src="Image/bitcoin.png" alt="" />
+            </div>
+            <div class="">
+              <h2 class="text-cyan-400 text-xl font-semibold">Bitcoin</h2>
+              <span class="block text-orange-400" id="bitcoin-price"
+                >price</span
+              >
+              <span class="text-green-600 text-sm items-center mkt flex"
+                ><span id="bitcoin-percent"></span> %
+                <span class="upDown text-lg flex items-center"
+                  ><ion-icon name="arrow-up-outline"></ion-icon></span
+              ></span>
+            </div>
+          </div>
+          <div class="flex gap-4 items-center">
+            <div class="">
+              <img class="w-full" src="Image/ethereum.png" alt="" />
+            </div>
+            <div class="">
+              <h2 class="text-cyan-400 text-xl font-semibold">Ethereum</h2>
+              <span class="block text-orange-400" id="ethcoin-price"
+                >price</span
+              >
+              <span class="text-green-600 text-sm items-center mkt flex"
+                ><span id="ethcoin-percent"></span> %
+                <span class="upDown text-lg flex items-center"
+                  ><ion-icon name="arrow-up-outline"></ion-icon></span
+              ></span>
+            </div>
+          </div>
+          <div class="flex gap-4 items-center">
+            <div class="">
+              <img class="w-full" src="Image/dog.png" alt="" />
+            </div>
+            <div class="">
+              <h2 class="text-cyan-400 text-xl font-semibold">Dogecoin</h2>
+              <span class="block text-orange-400" id="dogcoin-price"
+                >price</span
+              >
+              <span class="text-green-600 text-sm items-center mkt flex"
+                ><span id="dogcoin-percent"></span> %
+                <span class="upDown text-lg flex items-center"
+                  ><ion-icon name="arrow-up-outline"></ion-icon></span
+              ></span>
+            </div>
+          </div>
+          <div class="flex gap-4 items-center">
+            <div class="">
+              <img class="w-full" src="Image/carnado.png" alt="" />
+            </div>
+            <div class="">
+              <h2 class="text-cyan-400 text-xl font-semibold">Carnado</h2>
+              <span class="block text-orange-400" id="canadocoin-price"
+                >1.57%</span
+              >
+              <span class="text-green-600 text-sm items-center mkt flex">
+                <span id="canadocoin-percent"></span> %
+                <span class="upDown text-lg flex items-center"
+                  ><ion-icon name="arrow-up-outline"></ion-icon></span
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Famous people  -->
+      <section class="max-w-[1000px] m-auto mt-16 px-2">
+        <h1 class="text-3xl font-semibold text-white">
+          Famous people in England
+        </h1>
+        <div class="grid grid-cols-1 mt-4">
+          <div
+            class="rounded-2xl faderight group flex md:flex-row flex-col items-center px-2 md:gap-4 gap-1 md:p-4 py-4"
+          >
+            <div
+              class="group-hover:scale-105 transition-all m-auto overflow-hidden sm:min-w-32 w-32 md:h-32 h-32 rounded-full"
+            >
+              <img class="w-full" src="Image/super-star1.jpg" alt="" />
+            </div>
+            <div class="w-fullh-full flex flex-col p-3">
+              <h2 class="font-bold text-lg">Tom Hardy</h2>
+              <p class="mt-2">
+                With his breakthrough performance as Eames in Christopher
+                Nolan's sci-fi thriller Inception (2010), English actor Tom
+                Hardy has been brought to the attention of mainstream audiences
+                worldwide. However, the versatile actor has been steadily
+                working on both stage and screen since his television debut in
+                the miniseries Band of Brothers (2001).
+              </p>
+            </div>
+          </div>
+          <div
+            class="rounded-2xl fadeleft group flex md:flex-row flex-col-reverse items-center px-2 md:gap-4 gap-1 md:p-4 py-4"
+          >
+            <div class="w-fullh-full flex flex-col p-3">
+              <h2 class="font-bold text-lg">Matt Smith</h2>
+              <p class="mt-2">
+                Matt Smith is an English actor who shot to fame in the UK aged
+                26 when he was cast by producer Steven Moffat as the Eleventh
+                Doctor in the BBC's iconic science-fiction adventure series
+                Doctor Who (2005).Matthew Robert Smith was born and raised in
+                Northampton, the son of Lynne (Fidler) and David Smith. He was
+                educated at Northampton School For Boys.
+              </p>
+            </div>
+            <div
+              class="group-hover:scale-105 transition-all m-auto overflow-hidden sm:min-w-32 w-32 md:h-32 h-32 rounded-full"
+            >
+              <img class="w-full" src="Image/super-star2.jpg" alt="" />
+            </div>
+          </div>
+          <div
+            class="rounded-2xl faderight group flex md:flex-row flex-col items-center px-2 md:gap-4 gap-1 md:p-4 py-4"
+          >
+            <div
+              class="group-hover:scale-105 transition-all m-auto overflow-hidden sm:min-w-32 w-32 md:h-32 h-32 rounded-full"
+            >
+              <img class="w-full" src="Image/super-star3.jpg" alt="" />
+            </div>
+            <div class="w-fullh-full flex flex-col p-3">
+              <h2 class="font-bold text-lg">Emma Watson</h2>
+              <p class="mt-2">
+                Emma Charlotte Duerre Watson was born in Paris, France, to
+                British parents, Jacqueline Luesby and Chris Watson, both
+                lawyers. She moved to Oxfordshire when she was five, where she
+                attended the Dragon School. The same year, she was diagnosed
+                with ADHD and was put on Ritalin as she struggled to sit still.
+                From the age of six
+              </p>
+            </div>
+          </div>
+          <div
+            class="rounded-2xl fadeleft group flex md:flex-row flex-col-reverse items-center px-2 md:gap-4 gap-1 md:p-4 py-4"
+          >
+            <div class="w-fullh-full flex flex-col p-3">
+              <h2 class="font-bold text-lg">Jim Ratcliffe</h2>
+              <p class="mt-2">
+                Sir James Arthur Ratcliffe FIChemE is a British billionaire,
+                chemical engineer, and businessman. Ratcliffe is the chairman
+                and chief executive officer of the INEOS chemicals group, which
+                he founded in 1998. In May 2018, Ratcliffe was the richest
+                person in the UK, with a net worth of £21.05 billion.
+              </p>
+            </div>
+            <div
+              class="group-hover:scale-105 transition-all m-auto overflow-hidden sm:min-w-32 w-32 md:h-32 h-32 rounded-full"
+            >
+              <img class="w-full" src="Image/super-star4.jpg" alt="" />
+            </div>
+          </div>
+          <div
+            class="rounded-2xl faderight group flex md:flex-row flex-col items-center px-2 md:gap-4 gap-1 md:p-4 py-4"
+          >
+            <div
+              class="group-hover:scale-105 transition-all m-auto overflow-hidden sm:min-w-32 w-32 md:h-32 h-32 rounded-full"
+            >
+              <img class="w-full" src="Image/super-star5.jpg" alt="" />
+            </div>
+            <div class="w-fullh-full flex flex-col p-3">
+              <h2 class="font-bold text-lg">Len Blavatnik</h2>
+              <p class="mt-2">
+                Sir Leonard Valentinovich Blavatnik is a Soviet/Ukrainian-born
+                British-American businessman and philanthropist. As of January
+                2024, Forbes estimated his net worth at $31.3 billion. In 2017,
+                Blavatnik received a knighthood for services to philanthropy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Swiper 1  -->
+      <section class="px-2">
+        <div
+          class="max-w-[830px] m-auto rounded-3xl overflow-hidden border border-gray-600 border-opacity-80 hover:border-cyan-800 transition-all duration-500 mt-16"
+        >
+          <div class="swiper mySwiper1">
+            <div class="swiper-wrapper">
+              <!-- 1 -->
+              <div
+                class="swiper-slide text-center p-12 flex flex-col justify-center h-[480px] md:h-[440px]"
+              >
+                <div class="max-w-[350px] m-auto">
+                  <img src="Image/pre-order.svg" alt="" />
+                </div>
+                <div class="max-w-[660px] m-auto text-center">
+                  <h2 class="text-4xl mt-6 font-semibold">
+                    Pre-order your Universal Money Address (UMA)
+                  </h2>
+                  <p class="mt-6 font-semibold text-lg">
+                    Sending and receiving money with UMA is simple as email.
+                    Fast, global, and low-cost, connecting you to any bank,
+                    wallet, or exchange.
+                    <button
+                      onclick="url()"
+                      class="text-cyan-500 cursor-pointer font-bold"
+                    >
+                      Learn more
+                    </button>
+                  </p>
+                </div>
+                <div class="w-full flex justify-center">
+                  <button
+                    onclick="url()"
+                    class="w-[120px] cursor-pointer m-auto md:mx-0 mx-auto flex justify-center items-center h-12 text-lg font-bold mt-8 rounded-xl bg-blue-700 hover:bg-indigo-400 transition-all duration-500 gap-3"
+                  >
+                    <span class="-rotate-45 flex items-center text-2xl"
+                      ><ion-icon name="arrow-forward-outline"></ion-icon
+                    ></span>
+                    Get it
+                  </button>
+                </div>
+              </div>
+              <!-- 2 -->
+              <div
+                class="swiper-slide flex md:flex-row flex-col gap-8 p-12 pb-0 items-center max-h-[480px] md:text-left text-center earnreal"
+              >
+                <div class="">
+                  <h2 class="text-4xl font-bold">
+                    Earn Real Bitcoins Effortlessly with
+                    <span class="text-orange-400 font-semibold">
+                      Cloud Miner</span
+                    >
+                  </h2>
+                  <p class="mt-8">
+                    Engage with our unique reward system and earn up to 0.2 BTC
+                    monthly without the complexities of traditional mining
+                  </p>
+                  <div class="w-full flex justify-left">
+                    <button
+                      onclick="url()"
+                      class="w-[120px] cursor-pointer m-auto md:mx-0 mx-auto flex justify-center items-center h-12 text-lg font-bold mt-8 rounded-xl bg-orange-400 hover:bg-orange-300 transition-all gap-3"
+                    >
+                      <span class="-rotate-45 flex items-center text-2xl"
+                        ><ion-icon name="arrow-forward-outline"></ion-icon
+                      ></span>
+                      Get it
+                    </button>
+                  </div>
+                </div>
+                <div class="max-w-[270px]">
+                  <img src="Image/Earn-real.webp" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- samelessly -->
+      <section class="px-2">
+        <div
+          class="max-w-[830px] flex items-center md:gap-0 gap-8 md:flex-row flex-col m-auto rounded-3xl overflow-hidden border border-gray-600 border-opacity-80 hover:border-cyan-800 transition-all mt-10 text-center md:text-left earnreal md:px-12 px-8 pt-8"
+        >
+          <div class="flex-col justify-center md:mt-0 mt-12">
+            <h2 class="text-4xl font-semibold">
+              Samelessly navigate both traditional and crypto finance with
+              <span class="text-blue-700">CoinApex</span>
+            </h2>
+            <p class="mt-8 text-lg font-semibold">
+              Turn market swings into opportunities, growing your assets
+              securely and efficiently
+            </p>
+          </div>
+          <div
+            class="md:max-h-[480px] max-h-[350px] md:max-w-auto max-w-[300px] overflow-hidden"
+          >
+            <img src="Image/samelessly.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Keep Universal  -->
+      <section class="px-2 mt-10">
+        <div
+          class="max-w-[830px] *:rounded-3xl md:*:p-10 *:p-4 grid sm:grid-cols-2 grid-cols-1 m-auto gap-10"
+        >
+          <div
+            class="border border-opacity-80 border-gray-700 hover:border-cyan-700 transition-all"
+          >
+            <h2 class="text-3xl font-semibold">
+              Keep HODLing and get instant cash for everyday needs
+            </h2>
+            <p class="text-lg font-medium mt-6">
+              Use your crypto or stablecoins as collateral to get instant cash
+              loans and cryptocurrency loans
+            </p>
+            <img class="mt-8 m-auto" src="Image/download.png" alt="" />
+          </div>
+          <div
+            class="border border-opacity-80 border-gray-700 hover:border-cyan-700 transition-all"
+          >
+            <h2 class="text-3xl font-semibold">
+              Universal conversion between all crypto, fiat and stablecoins
+            </h2>
+            <p class="text-lg font-medium mt-6">
+              CoinApex’s app walks you through the crypto conversion so you can
+              exchange funds quickly and easily.
+            </p>
+            <span class="mt-6 block font-semibold">From</span>
+            <img class="mt-1" src="Image/universal1.webp" alt="" />
+            <div class="flex justify-center mt-6">
+              <div
+                class="w-10 h-10 rounded-full flex justify-center items-center bg-blue-700"
+              >
+                <i class="fa-solid fa-repeat"></i>
+              </div>
+            </div>
+            <span class="block font-semibold">To</span>
+            <img class="mt-1" src="Image/universal2.webp" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Bee  -->
+      <section class="px-2">
+        <div
+          class="max-w-[840px] m-auto flex md:flex-row flex-col gap-5 items-center border border-opacity-80 border-gray-700 hover:border-cyan-700 rounded-3xl mt-10 md:px-10 px-4 py-10"
+        >
+          <div class="">
+            <img src="Image/bee.png" alt="" />
+          </div>
+          <div class="max-w-[400px]">
+            <h2 class="text-3xl font-semibold">
+              Earn high payouts with your crypto. Be a pro Crypto HODLer
+            </h2>
+            <p class="mt-3 text-lg font-medium">
+              Turn your cold assets into hot profit and earn rewards and
+              compounding crypto payouts. Earn payouts in Bitcoin (BTC), Pax
+              Gold (PAXG), and all major stablecoins
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- All in one  -->
+      <section class="max-w-[840px] m-auto mt-16 px-2">
+        <div class="flex md:flex-row flex-col md:gap-16 gap-6">
+          <div class="max-w-[329px]">
+            <h2 class="text-5xl font-bold">All-in-One Platform</h2>
+            <p class="mt-4 font-medium">
+              Experience a Seamless blend of traditional fintech and crypto.
+              Transact, invest, and grow your wealth securely and effortlessly
+              with CoinApex
+            </p>
+          </div>
+          <div class="">
+            <img src="Image/all-in-one.png" alt="" />
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 grid-cols-1 mt-16 md:gap-8 gap-12">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="w-8"
+            >
+              <path
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.2"
+                d="M12 21.9999c5.5228 0 10-4.4771 10-10 0-5.52281-4.4772-9.99996-10-9.99996-5.52285 0-10 4.47715-10 9.99996 0 5.5229 4.47715 10 10 10ZM14.3096 8l5.74 9.94M9.69043 8H21.1704M7.38 12l5.74-9.94M9.68998 16.0001l-5.74-9.94004M14.31 16.0001H2.83002M16.62 12l-5.74 9.94"
+              ></path>
+            </svg>
+            <h2 class="text-2xl font-bold mt-3">Crypto and Fiat Finances</h2>
+            <p class="mt-3 font-medium">
+              CoinApex bridges the gap between fiat and crypto with a
+              full-service Web3 fintech platform called CoinApex
+            </p>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 120 24"
+              class="w-40"
+            >
+              <path
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.2"
+                d="M12.0002 21.9999s8-4 8-10V4.99994l-8-3-8.00002 3v6.99996c0 6 8.00002 10 8.00002 10Z"
+              ></path>
+              <path
+                fill="#fff"
+                d="M44.176 17.144c-.552 0-1.052-.124-1.5-.372-.44-.256-.772-.616-.996-1.08l.144-.132V17h-.9V7.916h.9v4.092l-.144-.252c.256-.408.596-.732 1.02-.972.432-.24.924-.36 1.476-.36.608 0 1.148.148 1.62.444.48.288.856.684 1.128 1.188.28.504.42 1.08.42 1.728 0 .64-.14 1.216-.42 1.728-.272.504-.648.904-1.128 1.2-.472.288-1.012.432-1.62.432Zm-.048-.9c.432 0 .816-.108 1.152-.324.344-.216.612-.508.804-.876.2-.376.3-.796.3-1.26 0-.472-.1-.892-.3-1.26-.192-.368-.46-.66-.804-.876-.336-.216-.72-.324-1.152-.324-.432 0-.824.108-1.176.324-.344.216-.62.512-.828.888-.2.368-.3.784-.3 1.248 0 .464.1.884.3 1.26.208.368.484.66.828.876.352.216.744.324 1.176.324Zm4.8147 3.396c-.128 0-.26-.012-.396-.036-.128-.016-.256-.048-.384-.096v-.84c.08.008.18.02.3.036.128.024.256.036.384.036.392 0 .692-.084.9-.252.208-.16.412-.472.612-.936l.408-.96-.024.792-2.724-6.816h.972l2.232 5.628h-.252l2.22-5.628h.996l-2.94 7.248c-.128.312-.292.608-.492.888-.192.28-.436.504-.732.672-.296.176-.656.264-1.08.264Zm63.2053-.6468V20h6.901v-4.5447h-1.007v3.5379h-5.894Zm0-14.9932v1.00744h5.894v3.53524h1.007V4h-6.901Zm-3.878 7.7912V9.45149h1.575c.769 0 1.045.25646 1.045.95741v.415c0 .7233-.266.9673-1.045.9673h-1.575Zm2.503.4149c.722-.1874 1.222-.8594 1.222-1.6591.001-.248-.05-.4934-.148-.72099-.099-.22758-.243-.43253-.423-.60205-.474-.45442-1.104-.68128-1.922-.68128h-2.218v6.91202h.984V12.7h1.479c.759 0 1.064.3156 1.064 1.1061v1.6492h1.006v-1.4914c0-1.0863-.256-1.5006-1.045-1.6196l.001-.1382Zm-8.299.2269h3.036v-.9081h-3.036V9.4508h3.331v-.90812h-4.337v6.91202h4.485v-.9082h-3.479V12.433Zm-3.3028.3656v.4735c0 .9969-.3644 1.3231-1.2814 1.3231h-.2166c-.919 0-1.3601-.2966-1.3601-1.669v-1.8557c0-1.38097.4628-1.66902 1.3785-1.66902h.1969c.8973 0 1.1815.33604 1.1927 1.26392h1.0848c-.099-1.36255-1.006-2.22136-2.3635-2.22136-.6603 0-1.2124.20712-1.6266.60171-.6209.58326-.9656 1.57035-.9656 2.95325 0 1.3329.2954 2.3207.9065 2.9322.4166.3997.9711.6226 1.5479.6221.5908 0 1.1336-.2367 1.4093-.7503h.1378v.6517h.9072v-3.5635h-2.6716v.9074h1.7238Zm-8.6936-3.3478h1.0746c1.0155 0 1.5675.25715 1.5675 1.6394v1.8169c0 1.381-.552 1.6394-1.5675 1.6394h-1.0746V9.4508Zm1.1632 6.0045c1.8826 0 2.5823-1.4322 2.5823-3.4563 0-2.05434-.7489-3.45632-2.602-3.45632h-2.1294v6.91262h2.1491Zm-6.91-3.0249h3.0365v-.9055h-3.0365V9.4508h3.3319v-.90812h-4.3375v6.91202h4.4852v-.9082h-3.479l-.0006-2.1161Zm-5.8152-3.88772H77.91v6.91202h4.5345v-.9082h-3.5289V8.54268ZM71 15.4553v4.542h6.9002v-1.0041h-5.8946v-3.5379H71ZM71 4v4.54268h1.0056V5.00744h5.8946V4H71Z"
+              ></path>
+            </svg>
+            <h2 class="text-2xl font-bold mt-3">
+              Safety First: Licensed and Regulated
+            </h2>
+            <p class="mt-3 font-medium">
+              We are licensed and regulated in multiple European countries, and
+              our network of offices across Europe ensures easy access to our
+              compliant platform and services
+            </p>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="w-8"
+            >
+              <path
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.2"
+                d="M12 21.9999c5.5228 0 10-4.4771 10-10 0-5.52281-4.4772-9.99996-10-9.99996-5.52285 0-10 4.47715-10 9.99996 0 5.5229 4.47715 10 10 10ZM14.3096 8l5.74 9.94M9.69043 8H21.1704M7.38 12l5.74-9.94M9.68998 16.0001l-5.74-9.94004M14.31 16.0001H2.83002M16.62 12l-5.74 9.94"
+              ></path>
+            </svg>
+            <h2 class="text-2xl font-bold mt-3">Exceptional User Experience</h2>
+            <p class="mt-3 font-medium">
+              With simplicity at its core, CoinApex platform provides an
+              intuitive and seamless experience for all users, regardless of
+              your knowledge of Web3 or crypto
+            </p>
+          </div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 120 24"
+              class="w-40"
+            >
+              <path
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.2"
+                d="M12.0002 21.9999s8-4 8-10V4.99994l-8-3-8.00002 3v6.99996c0 6 8.00002 10 8.00002 10Z"
+              ></path>
+              <path
+                fill="#fff"
+                d="M44.176 17.144c-.552 0-1.052-.124-1.5-.372-.44-.256-.772-.616-.996-1.08l.144-.132V17h-.9V7.916h.9v4.092l-.144-.252c.256-.408.596-.732 1.02-.972.432-.24.924-.36 1.476-.36.608 0 1.148.148 1.62.444.48.288.856.684 1.128 1.188.28.504.42 1.08.42 1.728 0 .64-.14 1.216-.42 1.728-.272.504-.648.904-1.128 1.2-.472.288-1.012.432-1.62.432Zm-.048-.9c.432 0 .816-.108 1.152-.324.344-.216.612-.508.804-.876.2-.376.3-.796.3-1.26 0-.472-.1-.892-.3-1.26-.192-.368-.46-.66-.804-.876-.336-.216-.72-.324-1.152-.324-.432 0-.824.108-1.176.324-.344.216-.62.512-.828.888-.2.368-.3.784-.3 1.248 0 .464.1.884.3 1.26.208.368.484.66.828.876.352.216.744.324 1.176.324Zm4.8147 3.396c-.128 0-.26-.012-.396-.036-.128-.016-.256-.048-.384-.096v-.84c.08.008.18.02.3.036.128.024.256.036.384.036.392 0 .692-.084.9-.252.208-.16.412-.472.612-.936l.408-.96-.024.792-2.724-6.816h.972l2.232 5.628h-.252l2.22-5.628h.996l-2.94 7.248c-.128.312-.292.608-.492.888-.192.28-.436.504-.732.672-.296.176-.656.264-1.08.264Zm63.2053-.6468V20h6.901v-4.5447h-1.007v3.5379h-5.894Zm0-14.9932v1.00744h5.894v3.53524h1.007V4h-6.901Zm-3.878 7.7912V9.45149h1.575c.769 0 1.045.25646 1.045.95741v.415c0 .7233-.266.9673-1.045.9673h-1.575Zm2.503.4149c.722-.1874 1.222-.8594 1.222-1.6591.001-.248-.05-.4934-.148-.72099-.099-.22758-.243-.43253-.423-.60205-.474-.45442-1.104-.68128-1.922-.68128h-2.218v6.91202h.984V12.7h1.479c.759 0 1.064.3156 1.064 1.1061v1.6492h1.006v-1.4914c0-1.0863-.256-1.5006-1.045-1.6196l.001-.1382Zm-8.299.2269h3.036v-.9081h-3.036V9.4508h3.331v-.90812h-4.337v6.91202h4.485v-.9082h-3.479V12.433Zm-3.3028.3656v.4735c0 .9969-.3644 1.3231-1.2814 1.3231h-.2166c-.919 0-1.3601-.2966-1.3601-1.669v-1.8557c0-1.38097.4628-1.66902 1.3785-1.66902h.1969c.8973 0 1.1815.33604 1.1927 1.26392h1.0848c-.099-1.36255-1.006-2.22136-2.3635-2.22136-.6603 0-1.2124.20712-1.6266.60171-.6209.58326-.9656 1.57035-.9656 2.95325 0 1.3329.2954 2.3207.9065 2.9322.4166.3997.9711.6226 1.5479.6221.5908 0 1.1336-.2367 1.4093-.7503h.1378v.6517h.9072v-3.5635h-2.6716v.9074h1.7238Zm-8.6936-3.3478h1.0746c1.0155 0 1.5675.25715 1.5675 1.6394v1.8169c0 1.381-.552 1.6394-1.5675 1.6394h-1.0746V9.4508Zm1.1632 6.0045c1.8826 0 2.5823-1.4322 2.5823-3.4563 0-2.05434-.7489-3.45632-2.602-3.45632h-2.1294v6.91262h2.1491Zm-6.91-3.0249h3.0365v-.9055h-3.0365V9.4508h3.3319v-.90812h-4.3375v6.91202h4.4852v-.9082h-3.479l-.0006-2.1161Zm-5.8152-3.88772H77.91v6.91202h4.5345v-.9082h-3.5289V8.54268ZM71 15.4553v4.542h6.9002v-1.0041h-5.8946v-3.5379H71ZM71 4v4.54268h1.0056V5.00744h5.8946V4H71Z"
+              ></path>
+            </svg>
+            <h2 class="text-2xl font-bold mt-3">The Best of Both Worlds</h2>
+            <p class="mt-3 font-medium">
+              CoinApex combines the robust, secure mechanisms of traditional
+              fintech with the speed, cost-efficiency, and transparency of Web3
+              technologies
+            </p>
+          </div>
+        </div>
+
+        <button
+          onclick="url()"
+          class="w-[140px] cursor-pointer flex justify-center items-center h-12 text-lg font-bold mt-12 rounded-xl bg-blue-700 hover:bg-indigo-400 transition-all duration-500 gap-3"
+        >
+          <span class="-rotate-45 flex items-center text-2xl"
+            ><ion-icon name="arrow-forward-outline"></ion-icon
+          ></span>
+          Get it
+        </button>
+      </section>
+
+      <!-- Blog -->
+      <section class="mt-16">
+        <div
+          class="max-w-[1280px] m-auto md:p-10 xl:p-16 lg:p-6 p-2 py-6 md:py-10 bg-[#0C1328] rounded-3xl"
+        >
+          <h2 class="text-4xl font-bold text-center">CoinApex Blog</h2>
+          <div
+            class="m-auto grid gap-4 md:grid-cols-2 grid-cols-1 sm:mt-16 mt-6"
+          >
+            <div
+              class="md:p-8 p-4 rounded-3xl border border-gray-600 hover:border-cyan-600 transition-all blog6"
+            >
+              <div class="flex justify-between text-sm text-cyan-400">
+                <span> July 11, 2024 </span>
+                <span> CoinApex Team </span>
+              </div>
+              <h2 class="mt-4 text-2xl font-bold">Why Is Crypto Going Up?</h2>
+              <p class="mt-4 text-sm">
+                Why is crypto going up now? Reasons for crypto market growth in
+                2024.
+              </p>
+            </div>
+            <div
+              class="md:p-8 p-4 rounded-3xl border border-gray-600 hover:border-cyan-600 transition-all blog6"
+            >
+              <div class="flex justify-between text-sm text-cyan-400">
+                <span> July 2, 2024 </span>
+                <span> CoinApex Team </span>
+              </div>
+              <h2 class="mt-4 text-2xl font-bold">
+                Best Crypto Wallet in 2024
+              </h2>
+              <p class="mt-4 text-sm">
+                Choosing a crypto wallet. What is the best crypto wallet and how
+                to find the best one for you.
+              </p>
+            </div>
+            <div
+              class="md:p-8 p-4 rounded-3xl border border-gray-600 hover:border-cyan-600 transition-all blog6"
+            >
+              <div class="flex justify-between text-sm text-cyan-400">
+                <span> June 26, 2024 </span>
+                <span> CoinApex Team </span>
+              </div>
+              <h2 class="mt-4 text-2xl font-bold">
+                Analysis of Cryptocurrency Scam Typology: Elderly Abuse
+              </h2>
+              <p class="mt-4 text-sm">
+                Cryptocurrency scams are a growing threat to both individual
+                investors and financial institutions. As these schemes become
+                more sophisticated, particularly during a bull market where
+                there is lots of press about crypto...
+              </p>
+            </div>
+            <div
+              class="md:p-8 p-4 rounded-3xl border border-gray-600 hover:border-cyan-600 transition-all blog6"
+            >
+              <div class="flex justify-between text-sm text-cyan-400">
+                <span> June 20, 2024 </span>
+                <span> CoinApex Team </span>
+              </div>
+              <h2 class="mt-4 text-2xl font-bold">MiCA Changes in EU</h2>
+              <p class="mt-4 text-sm">
+                The European Union's Markets in Crypto-Assets (MiCA) regulation
+                is set to bring significant changes to the crypto landscape.
+                This regulation aims to create a standardized regulatory
+                framework, ensuring transparency, protecting investors, and
+                preventing market manipulation.
+              </p>
+            </div>
+            <div
+              class="md:p-8 p-4 rounded-3xl border border-gray-600 hover:border-cyan-600 transition-all blog6"
+            >
+              <div class="flex justify-between text-sm text-cyan-400">
+                <span> June 19, 2024 </span>
+                <span> CoinApex Team </span>
+              </div>
+              <h2 class="mt-4 text-2xl font-bold">
+                Important BNB Update: Beacon Network Changes Ahead
+              </h2>
+              <p class="mt-4 text-sm">
+                BNB Beacon Network (BEP2) Changes Starting in June
+              </p>
+            </div>
+            <div
+              class="md:p-8 p-4 rounded-3xl border border-gray-600 hover:border-cyan-600 transition-all blog6"
+            >
+              <div class="flex justify-between text-sm text-cyan-400">
+                <span> June 12, 2024 </span>
+                <span> CoinApex Team </span>
+              </div>
+              <h2 class="mt-4 text-2xl font-bold">
+                Crypto Valley Conference 2024: CoinApex Recap
+              </h2>
+              <p class="mt-4 text-sm">
+                We just returned from yet another successful event at the Crypto
+                Valley Conference
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer  -->
+      <footer
+        class="max-w-[1000px] m-auto grid lg:grid-cols-5 md:grid-cols-4 grid-cols-3 text-sm mt-20 gap-6 px-2 pb-4"
+      >
+        <div>
+          <h2 class="text-cyan-500 font-bold">PLATFORM</h2>
+          <ul class="mt-4 *:mt-1">
+            <li>MultiHODL</li>
+            <li>Crypto Loans</li>
+            <li>Exchange</li>
+            <li>Crypto Card</li>
+            <li>Yield Account</li>
+            <li>Cloud Miner</li>
+            <li>Promos</li>
+            <li>Loyalty Program</li>
+            <li>Rewards</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-cyan-500 font-bold">COMPANY</h2>
+          <ul class="mt-4 *:mt-1">
+            <li>About CoinApex</li>
+            <li>Affiliate Program</li>
+            <li>Ambassador Program</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-cyan-500 font-bold">Check more</h2>
+          <ul class="mt-4 *:mt-1">
+            <li>Earn Crypto</li>
+            <li>Crypto Prices</li>
+            <li>Web3 Wallet</li>
+            <li>What Is</li>
+            <li>Market</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-cyan-500 font-bold">LEGAL</h2>
+          <ul class="mt-4 *:mt-1">
+            <li>Privacy Notice</li>
+            <li>Cookie Declaration</li>
+            <li>Security and Scam Protection</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-cyan-500 font-bold">HELP</h2>
+          <ul class="mt-4 *:mt-1">
+            <li>Helpdesk Portal</li>
+            <li>Glossary</li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
